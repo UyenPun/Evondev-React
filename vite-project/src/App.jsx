@@ -1,6 +1,6 @@
 import "./App.css";
 
-function App() {
+function Feature() {
   return (
     <div className='feature'>
       <img
@@ -15,6 +15,16 @@ function App() {
         dolores facilis alias debitis, voluptatibus recusandae dolorem
         reprehenderit delectus. Nulla, sequi velit?
       </p>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <Feature></Feature>
+      <Feature></Feature>
+      <Feature></Feature>
     </div>
   );
 }
