@@ -136,3 +136,7 @@ chia nhỏ giao diện, tái sử dụng, dễ bảo trì
 # Bài 16: Refactor code
 
 - Tối ưu code lại
+
+# Bài 17: Tìm hiểu props children
+
+- Nằm ở giữa component
