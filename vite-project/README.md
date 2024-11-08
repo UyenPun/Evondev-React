@@ -132,3 +132,7 @@ chia nhỏ giao diện, tái sử dụng, dễ bảo trì
 - Properties: thuộc tính
 
 # Bài 13: Rendering list
+
+# Bài 16: Refactor code
+
+- Tối ưu code lại
