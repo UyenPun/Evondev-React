@@ -130,3 +130,5 @@ chia nhỏ giao diện, tái sử dụng, dễ bảo trì
 # Bài 10: Props là gì ?
 
 - Properties: thuộc tính
+
+# Bài 13: Rendering list
