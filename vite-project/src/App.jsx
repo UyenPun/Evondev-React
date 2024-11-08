@@ -6,14 +6,28 @@ function App() {
   return (
     <div className='youtube-list'>
       {/* item: 1 doi tuong cua YoutubeData; index: start: 0 */}
-      {YoutubeData.map((item) => (
-        <YoutubeItem
-          key={item.id}
-          image={item.image}
-          avatar={item.avatar}
-          title={item.title}
-          author={item.author}></YoutubeItem>
-      ))}
+      {YoutubeData.map((item, index) => {
+        let newClass = "";
+        if (index === 1) newClass = "abc";
+
+        {
+          /* Cach 2: */
+          {
+            /* const newClass = index === 1 ? "abc" : ""; */
+          }
+        }
+
+        return (
+          <YoutubeItem
+            key={item.id}
+            image={item.image}
+            avatar={item.avatar || item.image}
+            title={item.title}
+            author={item.author}
+            // Neu index = 1 thi co class abc
+            className={newClass}></YoutubeItem>
+        );
+      })}
     </div>
   );
 }
@@ -21,7 +35,7 @@ function App() {
 function YoutubeItem(props) {
   return (
     <div>
-      <div className='youtube-item'>
+      <div className={`youtube-item ${props.className}`}>
         <div className='youtube-image'>
           <img
             src={props.image}
