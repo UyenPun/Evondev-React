@@ -159,6 +159,8 @@ function Toggle() {
 }`
 
 1. enabling state: bật nó lên useState(initialize value)
-2. initialize state: giá trị khởi tạo - useState(...)
+2. initialize state: giá trị khởi tạo - useState(...) -> boolean, number, string, undefined, null, obj, {}
 3. reading state:
 4. update state:
+
+- state changes -> re-render: cập nhật lại UI
