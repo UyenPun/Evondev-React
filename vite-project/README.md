@@ -140,3 +140,25 @@ chia nhỏ giao diện, tái sử dụng, dễ bảo trì
 # Bài 17: Tìm hiểu props children
 
 - Nằm ở giữa component
+
+# Bài 20: State là gì ?
+
+- state nằm trong component và có thể tùy chỉnh state đó
+
+# Bài 21: stateless và stateful functional components
+
+- stateless: ko dùng state
+  `
+function Toggle() {
+   return <div className="toggle"></div>;
+}`
+- stateful: có dùng state
+  `function Toggle2() {
+  const [count, setCount] = useState();
+  return <div className="toggle"></div>;
+}`
+
+1. enabling state: bật nó lên useState(initialize value)
+2. initialize state: giá trị khởi tạo - useState(...)
+3. reading state:
+4. update state:
