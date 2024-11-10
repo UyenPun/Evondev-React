@@ -34,6 +34,6 @@ export default [
         { allowConstantExport: true },
       ],
     },
-    extends: ["plugin:react/recommended"],
+    // extends: ["eslint:recommended", "plugin:react/recommended"],
   },
 ];

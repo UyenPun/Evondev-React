@@ -178,3 +178,12 @@ const props = {
   value:"X",
   onClick: () => true
 }`
+
+- Obj Detructuring:
+  `const students = {
+  name: "Uyen",
+  age: 18
+}`
+
+const [name, age] = students;
+console.log(name, age);

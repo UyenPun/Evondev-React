@@ -1,11 +1,17 @@
 import React from "react";
 
-const Cell = (props) => {
+const Cell = ({ value, onClick }) => {
+  // Obj Detructuring:
+  // const { value, onClick } = props;
+  // console.log(value, onClick);
+  // hoac:
+  // const Cell = ({ value, onClick }) => {}
+
   return (
     <div
       className='game-cell'
-      onClick={props.onClick}>
-      {props.value}
+      onClick={onClick}>
+      {value}
     </div>
   );
 };
