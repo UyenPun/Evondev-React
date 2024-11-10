@@ -164,3 +164,17 @@ function Toggle() {
 4. update state:
 
 - state changes -> re-render: cập nhật lại UI
+
+# Bài 26: Những nguyên tắc khi sử dụng hook cần nắm
+
+# Bài 27: Stale state là gì ?
+
+- sau khoảng thời gian nào đó mới update value
+
+# Bài 28: Thực hành game Tictactoe phần 1:
+
+`
+const props = {
+  value:"X",
+  onClick: () => true
+}`

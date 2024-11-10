@@ -1,11 +1,11 @@
 import "./App.css";
-import Game from "./components/tictactoe/Game";
+import Toggle from "./components/toggle/Toggle";
 
 // Parent component
 function App() {
   return (
     <div>
-      <Game></Game>
+      <Toggle></Toggle>
     </div>
   );
 }

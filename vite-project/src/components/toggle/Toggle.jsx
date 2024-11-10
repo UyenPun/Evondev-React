@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ToggleStyle.css";
 
-function Toggler() {
+function Toggle() {
   const [on, setOn] = useState(false);
   console.log({ on }); // [false, function]
 
