@@ -1,0 +1,75 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Toggle */
+.toggle {
+  width: 100px;
+  height: 50px;
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 100rem;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background-color: pink;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.2 linear;
+}
+
+.spinner.active {
+  /*(50*2+5*2)-40 = 50px*/
+  transform: translateX(50px);
+}
+
+.toggle-control {
+  margin: 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  /* background-color: red; */
+}
+
+.toggle-control > * {
+  cursor: pointer;
+}
