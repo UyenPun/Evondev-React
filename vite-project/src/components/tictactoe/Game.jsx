@@ -9,13 +9,28 @@ const Game = () => {
   const [xIsNext, setXIsNext] = useState(true); // x - true | o - false
   const winner = calculateWinner(board);
 
-  const handleCick = () => {};
+  const handleCick = (index) => {
+    const boardCopy = [...board];
+    if (winner || boardCopy[index]) return; //  người win hoặc ô đã nhấn rồi -> ko được nhấn nữa
+    boardCopy[index] = xIsNext ? "X" : "O"; // tại index bấm vào
+    setBoard(boardCopy);
+    setXIsNext((xIsNext) => !xIsNext); // doi người đánh next ở moi lần bấm vào o dấy
+  };
+
+  const handleResetGame = () => {
+    setBoard(Array(9).fill(null));
+  };
 
   return (
     <div>
       <Board
         cells={board}
         onClick={handleCick}></Board>
+      <button
+        className='button-reset'
+        onClick={handleResetGame}>
+        Reset Game
+      </button>
     </div>
   );
 };
