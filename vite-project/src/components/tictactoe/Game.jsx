@@ -27,7 +27,7 @@ const Game = () => {
         cells={board}
         onClick={handleCick}></Board>
 
-      {winner && <div className='game-winner'>`Winner is ${winner}` : ""</div>}
+      {winner && <div className='game-winner'>Winner is {winner}</div>}
 
       <button
         className='game-reset'
