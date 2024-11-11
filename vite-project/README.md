@@ -187,3 +187,5 @@ const props = {
 
 const [name, age] = students;
 console.log(name, age);
+
+# Bài 33: Xử lý state phức tạp như thế nào ?
