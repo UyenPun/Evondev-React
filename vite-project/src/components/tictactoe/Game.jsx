@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Board from "./Board";
 import "./GameStyle.css";
 import { calculateWinner } from "../../helper";
@@ -21,20 +21,16 @@ const Game = () => {
     setBoard(Array(9).fill(null));
   };
 
-  // Alert the winner when one is found
-  useEffect(() => {
-    if (winner) {
-      alert(`Player ${winner} has won the game!`);
-    }
-  }, [winner]);
-
   return (
     <div>
       <Board
         cells={board}
         onClick={handleCick}></Board>
+
+      {winner && <div className='game-winner'>`Winner is ${winner}` : ""</div>}
+
       <button
-        className='button-reset'
+        className='game-reset'
         onClick={handleResetGame}>
         Reset Game
       </button>

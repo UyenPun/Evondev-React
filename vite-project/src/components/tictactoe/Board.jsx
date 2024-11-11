@@ -17,8 +17,8 @@ const Board = (props) => {
         <Cell
           key={index}
           value={item} // gia tri truyen vao
-          //onClick thuoc ve prop cua componet cell
-          onClick={() => props.onClick(index)}></Cell>
+          onClick={() => props.onClick(index)} //onClick thuoc ve prop cua componet cell
+          className={item === "X" ? "is-x" : item === "O" ? "is-o" : ""}></Cell>
       ))}
     </div>
   );
