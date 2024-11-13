@@ -189,3 +189,42 @@ const [name, age] = students;
 console.log(name, age);
 
 # Bài 33: Xử lý state phức tạp như thế nào ?
+
+# Bài 34: Tìm hiểu useReducer
+
+- dùng để quản lý state phức tạp, đặc biệt là khi có nhiều hành động khác nhau tác động lên state.
+  // useState
+  // 1. Init state: 0
+  // 2. Actions: Up (state + 1) / Down (state 1)
+
+  _-------------------------------------------------------------------_
+
+  // useReducer
+  // 1. Init state: 0
+  // 2. Actions: Up (state + 1)/ Down (state - 1)
+  // 3. Reducer
+  // 4. Dispatch
+
+![alt text](../vite-project/img/image0.png)
+// Init state
+const initState = 0
+
+// Actions
+const UP_ACTION = 'up'
+const DOWN_ACTION = 'down'
+
+// Reducer
+`
+const reducer (state, action) => {
+  switch (action) {
+    case UP_ACTION:
+      return state + 1
+    case DOWN_ACTION:
+      return state - 1
+    default: throw new Error('Invalid action')
+  }
+}`
+
+// Dispatch -> initState
+`const [count, dispatch] = useReducer(reducer, initState)`
+![alt text](../vite-project/img/image1.png)
