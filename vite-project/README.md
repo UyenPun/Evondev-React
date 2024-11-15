@@ -228,3 +228,9 @@ const reducer (state, action) => {
 // Dispatch -> initState
 `const [count, dispatch] = useReducer(reducer, initState)`
 ![alt text](../vite-project/img/image1.png)
+
+# Bài 37: React cập nhật state như thế nào ?
+
+- State luôn bất biến: React không cho phép thay đổi trực tiếp giá trị state. Phải sử dụng setState hoặc setState hook.
+- Cập nhật state bất đồng bộ: Nếu cần thao tác với giá trị cũ, sử dụng callback hoặc hàm bên trong setState.
+- Không nên cập nhật trực tiếp state trong vòng lặp hoặc điều kiện; hãy luôn dùng cách chuẩn React cung cấp.
