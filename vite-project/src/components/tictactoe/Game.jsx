@@ -1,5 +1,5 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useReducer, useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useReducer } from "react";
 import Board from "./Board";
 import "./GameStyle.css";
 import { calculateWinner } from "../../helper";
@@ -9,12 +9,23 @@ const initialState = {
   xIsNext: true,
 };
 
+// immutable state
+// [...arr] {...obj}
+// deep copy JSON.parse(JSON.stringify(obj))
 const gameReducer = (state, action) => {
-  console.log("it working");
+  switch (
+    action.type // do prop dispatch la type
+  ) {
+    case "CLICK": {
+      // console.log(state, action.payload);
 
-  switch (action.type) {
-    case "CLICK":
-      break;
+      const [board, xIsNext] = state;
+      const [index, winner] = action.payload;
+      if (winner || board[index]) return;
+
+      const nextState = JSON.parse(JSON.stringify(state));
+      return nextState;
+    }
 
     default:
       break;
@@ -26,42 +37,16 @@ const Game = () => {
   // useReducer
   const [state, dispatch] = useReducer(gameReducer, initialState);
 
-  // const [board, setBoard] = useState(Array(9).fill(null));
-  // const [xIsNext, setXIsNext] = useState(true); // x - true | o - false
-  // const [state, setState] = useState({
-  //   board: Array(9).fill(null),
-  //   xIsNext: true,
-  // });
-
   const winner = calculateWinner(state.board);
 
   const handleCick = (index) => {
-    const boardCopy = [...state.board];
-    if (winner || boardCopy[index]) return; //  người win hoặc ô đã nhấn rồi -> ko được nhấn nữa
     dispatch({
       type: "CLICK",
-      payload: { index }, // payload: data se truyen vao
+      payload: { index, winner }, // payload: data sẽ trả về
     });
-
-    // boardCopy[index] = state.xIsNext ? "X" : "O"; // tại index bấm vào
-
-    // setBoard(boardCopy);
-    // setXIsNext((xIsNext) => !xIsNext); // doi người đánh next ở moi lần bấm vào o dấy
-    // setState({
-    //   ...state,
-    //   board: boardCopy,
-    //   xIsNext: !state.xIsNext, // doi người đánh next ở moi lần bấm vào o dấy
-    // });
   };
 
-  const handleResetGame = () => {
-    // setBoard(Array(9).fill(null));
-    // setXIsNext(true);
-    // setState({
-    //   board: Array(9).fill(null),
-    //   xIsNext: true,
-    // });
-  };
+  const handleResetGame = () => {};
 
   return (
     <div>

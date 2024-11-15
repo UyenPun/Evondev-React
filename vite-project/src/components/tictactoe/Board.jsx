@@ -1,6 +1,5 @@
 import React from "react";
 import Cell from "./Cell";
-import { calculateWinner } from "../../helper";
 
 // create table gom 9 o
 const Board = (props) => {
