@@ -18,16 +18,32 @@ const gameReducer = (state, action) => {
   ) {
     case "CLICK": {
       // console.log(state, action.payload);
+      // Trích xuất state và payload
+      const { board, xIsNext } = state;
+      const { index, winner } = action.payload;
 
-      const [board, xIsNext] = state;
-      const [index, winner] = action.payload;
-      if (winner || board[index]) return;
+      // Kiểm tra điều kiện dừng
+      if (winner || board[index]) return state;
 
+      // Clone state và cập nhật giá trị
+      const nextState = JSON.parse(JSON.stringify(state)); // clone state init
+      nextState.board[index] = xIsNext ? "X" : "O";
+      nextState.xIsNext = !xIsNext;
+
+      return nextState;
+    }
+
+    // Reset
+    case "RESET": {
       const nextState = JSON.parse(JSON.stringify(state));
+      nextState.board = Array(9).fill(null);
+      nextState.xIsNext = true;
+
       return nextState;
     }
 
     default:
+      console.log("ERROR");
       break;
   }
 };
@@ -36,7 +52,6 @@ const gameReducer = (state, action) => {
 const Game = () => {
   // useReducer
   const [state, dispatch] = useReducer(gameReducer, initialState);
-
   const winner = calculateWinner(state.board);
 
   const handleCick = (index) => {
@@ -46,7 +61,11 @@ const Game = () => {
     });
   };
 
-  const handleResetGame = () => {};
+  const handleResetGame = () => {
+    dispatch({
+      type: "RESET",
+    });
+  };
 
   return (
     <div>
