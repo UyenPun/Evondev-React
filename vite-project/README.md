@@ -242,3 +242,7 @@ const reducer (state, action) => {
 - `npm install node-sass@4.14.1`
 
 - Nếu bạn cài node-sass bị lỗi thì thay vào đó cài sass thôi là được với lệnh này: `npm i sass`
+
+# Bài 42: Cài đặt thư viện styled-components
+
+`npm install styled-components --save` -> nếu lỗi coi video có fix
