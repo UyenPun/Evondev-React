@@ -246,3 +246,6 @@ const reducer (state, action) => {
 # Bài 42: Cài đặt thư viện styled-components
 
 `npm install styled-components --save` -> nếu lỗi coi video có fix
+
+- https://styled-components.com/docs/tooling#babel-plugin : `npm install --save-dev babel-plugin-styled-components` xong làm tiếp trong link hdan
+- https://dribbble.com/rachel48
