@@ -234,3 +234,11 @@ const reducer (state, action) => {
 - State luôn bất biến: React không cho phép thay đổi trực tiếp giá trị state. Phải sử dụng setState hoặc setState hook.
 - Cập nhật state bất đồng bộ: Nếu cần thao tác với giá trị cũ, sử dụng callback hoặc hàm bên trong setState.
 - Không nên cập nhật trực tiếp state trong vòng lặp hoặc điều kiện; hãy luôn dùng cách chuẩn React cung cấp.
+
+=> dùng callback
+
+# Bài 40: Cài đặt và sử dụng Sass cơ bản
+
+- `npm install node-sass@4.14.1`
+
+- Nếu bạn cài node-sass bị lỗi thì thay vào đó cài sass thôi là được với lệnh này: `npm i sass`

@@ -24,9 +24,9 @@ textarea {
 }
 button {
   cursor: pointer;
-  background-color: transparent;
+  /* background-color: transparent;
   outline: none;
-  border: 0;
+  border: 0; */
 }
 body {
   min-height: 100vh;
