@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 /**
 const StyledCard = styled.tag(h1, h2, div, span, strong, a, p, section, article...)``
@@ -8,7 +8,7 @@ CSS-in-JS
 
 const StyledCard = styled.div`
   position: relative;
-  width: 400px;
+  /* width: 400px; */
 `;
 
 const CardImage = styled.div`
@@ -74,18 +74,38 @@ const CardTitle = styled.h3`
   font-weight: 500;
   color: black;
 `;
+// scp
+/* Neu co secondary va khi ko co */
 const CardCAmount = styled.span`
-  font-size: 18px;
+  font-size: ${(props) => props.fontSize || "18px"};
   font-weight: bold;
-  background: linear-gradient(
-    86.88deg,
-    #7d6aff 1.38%,
-    #ffb86c 64.35%,
-    #fc2872 119.91%
-  );
+
+  ${(props) =>
+    props.secondary &&
+    css`
+      background: linear-gradient(86.88deg, #20e3b2, #2cccff);
+    `};
+
+  ${(props) =>
+    !props.secondary &&
+    css`
+      background: linear-gradient(
+        86.88deg,
+        #7d6aff 1.38%,
+        #ffb86c 64.35%,
+        #fc2872 119.91%
+      );
+    `};
+
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+`;
+
+const CardMeta = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
 `;
 
 const Card = (props) => {
@@ -108,12 +128,24 @@ const Card = (props) => {
             <UserName>@zndrson</UserName>
           </CardUser>
 
-          <div>❤️ 256</div>
+          <CardMeta>
+            <img
+              src='./icon-heart.svg'
+              alt='icon-heart'
+            />
+            256
+          </CardMeta>
         </CardTop>
 
         <CardFooter>
           <CardTitle>Cosmic Perspective</CardTitle>
-          <CardCAmount>12,000 PSL</CardCAmount>
+          {/* <CardCAmount>12,000 PSL</CardCAmount> */}
+          <CardCAmount
+            secondary={props.secondary}
+            fontSize='20px'>
+            12,000 PSL
+          </CardCAmount>
+          {/* <CardCAmount secondary>12,000 PSL</CardCAmount> */}
         </CardFooter>
       </CardContent>
     </StyledCard>
