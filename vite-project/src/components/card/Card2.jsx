@@ -56,7 +56,7 @@ const StyledCard = styled.div`
   .user-name {
     font-weight: 300;
     font-size: 16px;
-    color: #333;
+    color: ${(props) => props.theme.orange};
   }
 
   .card-footer {
@@ -69,7 +69,7 @@ const StyledCard = styled.div`
   .card-title {
     font-size: 18px;
     font-weight: 500;
-    color: black;
+    color: ${(props) => props.theme.colors.blue};
   }
 
   .card-amount {
