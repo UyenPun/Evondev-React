@@ -67,6 +67,7 @@ const CardFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 30px;
 `;
 
 const CardTitle = styled.h3`
