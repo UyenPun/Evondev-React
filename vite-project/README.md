@@ -249,3 +249,11 @@ const reducer (state, action) => {
 
 - https://styled-components.com/docs/tooling#babel-plugin : `npm install --save-dev babel-plugin-styled-components` xong làm tiếp trong link hdan
 - https://dribbble.com/rachel48
+
+# Bài 52: Giới thiệu và cài đặt tailwindcss
+
+- cài đặt với Craco Tailwind: https://v2.tailwindcss.com/docs/guides/create-react-app
+
+- with Vite: https://tailwindcss.com/docs/guides/vite
+  `npm create vite@latest vite-project -- --template react`
+  `cd vite-project`
