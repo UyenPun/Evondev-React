@@ -252,8 +252,13 @@ const reducer (state, action) => {
 
 # Bài 52: Giới thiệu và cài đặt tailwindcss
 
-- cài đặt với Craco Tailwind: https://v2.tailwindcss.com/docs/guides/create-react-app
+- cài đặt với Craco Tailwind Create-App: https://v2.tailwindcss.com/docs/guides/create-react-app
 
-- with Vite: https://tailwindcss.com/docs/guides/vite
+- cài đặt với Vite: https://tailwindcss.com/docs/guides/vite
   `npm create vite@latest vite-project -- --template react`
   `cd vite-project`
+
+# Bài 52.2: Hướng dẫn sửa lỗi TailwindCSS không tạo ra class
+- `npm install -g rimraf`
+- `rimraf node_modules`
+- `rimraf package-lock.json`
