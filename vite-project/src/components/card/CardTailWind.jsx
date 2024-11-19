@@ -7,20 +7,24 @@ const CardTailWind = () => {
         <img
           src='https://cdn.dribbble.com/users/2400293/screenshots/16527147/media/f079dc5596a5fb770016c4ea506cd77b.png?resize=1000x750&vertical=centerr'
           alt=''
+          className='block w-full h-full object-cover rounded-lg'
         />
       </div>
 
-      <div className='card-content'>
-        <div className='card-top'>
-          <div className='card-user'>
+      <div className='absolute left-2/4 -translate-x-2/4 translate-y-2/4 bottom-0 bg-white z-10 rounded-[20px] p-5  w-[calc(100%-36px)]'>
+        <div className='flex justify-between items-center mb-8'>
+          <div className='flex items-center gap-x-3'>
             <img
               src='https://cdn.dribbble.com/users/2400293/screenshots/16527147/media/f079dc5596a5fb770016c4ea506cd77b.png?resize=1000x750&vertical=center'
               alt=''
+              className='w-8 h-8 rounded-full object-cover flex-shrink-0'
             />
-            <span className='user-name'>@zndrson</span>
+            <span className='font-light text-base text-[#ffa400]'>
+              @zndrson
+            </span>
           </div>
 
-          <div className='card-meta'>
+          <div className='flex items-center gap-x-3'>
             <img
               src='./icon-heart.svg'
               alt='icon-heart'
@@ -29,15 +33,11 @@ const CardTailWind = () => {
           </div>
         </div>
 
-        <div className='card-footer'>
-          <div className='card-title'>Cosmic Perspective</div>
-          {/* <CardCAmount>12,000 PSL</CardCAmount> */}
-          <div
-            className='card-amount'
-            fontSize='20px'>
+        <div className='flex justify-between items-center'>
+          <div className='font-medium text-lg'>Cosmic Perspective</div>
+          <div className='text-lg font-bold text-transparent bg-clip-text bg-primary-gradient'>
             12,000 PSL
           </div>
-          {/* <CardCAmount secondary>12,000 PSL</CardCAmount> */}
         </div>
       </div>
     </div>

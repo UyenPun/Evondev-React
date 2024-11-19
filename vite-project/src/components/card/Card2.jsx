@@ -37,6 +37,7 @@ const StyledCard = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
   }
 
   .card-user {
@@ -59,11 +60,16 @@ const StyledCard = styled.div`
     color: ${(props) => props.theme?.orange || "#ffa400"};
   }
 
+  .card-meta {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+
   .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
   }
 
   .card-title {
@@ -96,12 +102,6 @@ const StyledCard = styled.div`
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-  }
-
-  .card-meta {
-    display: flex;
-    align-items: center;
-    column-gap: 12px;
   }
 `;
 
