@@ -259,6 +259,17 @@ const reducer (state, action) => {
   `cd vite-project`
 
 # Bài 52.2: Hướng dẫn sửa lỗi TailwindCSS không tạo ra class
+
 - `npm install -g rimraf`
 - `rimraf node_modules`
 - `rimraf package-lock.json`
+
+# Phân biệt ${props... ? "" : ""}, ||, và &&
+
+![alt text](./img/image2.png)
+![alt text](./img/image3.png)
+![alt text](./img/image4.png)
+
+- Dùng ${props...} khi cần kết hợp giá trị props vào chuỗi.
+- Dùng || để gán giá trị mặc định khi giá trị props có thể là undefined, null, hoặc falsy.
+- Dùng && khi cần render một thành phần có điều kiện, tùy thuộc vào giá trị của props hoặc trạng thái.

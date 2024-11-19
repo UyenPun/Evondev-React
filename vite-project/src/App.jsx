@@ -6,7 +6,10 @@ function App() {
   return (
     <>
       <CardList>
-        <CardTailWind></CardTailWind>
+        <CardTailWind
+          primary={true}
+          fontSize='text-2xl'></CardTailWind>
+        {/* <CardTailWind></CardTailWind> */}
       </CardList>
     </>
   );

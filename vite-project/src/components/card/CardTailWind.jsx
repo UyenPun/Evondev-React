@@ -1,6 +1,10 @@
 import React from "react";
 
-const CardTailWind = () => {
+const CardTailWind = (props) => {
+  const amountClasses = `text-lg font-bold text-transparent bg-clip-text ${
+    props.primary ? "bg-primary-gradient" : "bg-secondary-gradient"
+  }`;
+
   return (
     <div className='relative'>
       <div className='w-full rounded-lg h-[400px]'>
@@ -34,10 +38,10 @@ const CardTailWind = () => {
         </div>
 
         <div className='flex justify-between items-center'>
-          <div className='font-medium text-lg'>Cosmic Perspective</div>
-          <div className='text-lg font-bold text-transparent bg-clip-text bg-primary-gradient'>
-            12,000 PSL
+          <div className={`font-medium ${props.fontSize || "text-lg"}`}>
+            Cosmic Perspective
           </div>
+          <div className={amountClasses}>12,000 PSL</div>
         </div>
       </div>
     </div>
