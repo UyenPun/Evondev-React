@@ -3,7 +3,7 @@ import React from "react";
 const CardTailWind = () => {
   return (
     <div className='relative'>
-      <div className='w-full rounded-lg'>
+      <div className='w-full rounded-lg h-[400px]'>
         <img
           src='https://cdn.dribbble.com/users/2400293/screenshots/16527147/media/f079dc5596a5fb770016c4ea506cd77b.png?resize=1000x750&vertical=centerr'
           alt=''
